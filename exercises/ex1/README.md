@@ -290,10 +290,13 @@ Follow these steps to complete the exercise:<br>
 7.  Review the automatically populated **System Information**. Notice that the **Host** identifies the source system (`source.lab.internal`). Choose **Create** to save the entry.<br><br>
     ![](images/Screenshot-6-03.png)<br>
 
-8.  Verify that the new entry appears in the **Log Entries** list alongside the existing welcome message.<br><br>
+8.  Once saved, select the **Back** button in the SAP Fiori Launchpad header to return to the **Log Entries** overview.<br><br>
     ![](images/Screenshot-6-04.png)<br>
+
+9.  Verify that the new entry appears in the **Log Entries** list alongside the existing welcome message.<br><br>
+    ![](images/Screenshot-6-05.png)<br>
     
-9.  **Congratulations!** You have completed Exercise 1. The source system remains available during the **Uptime** phase, and your migration milestone has been recorded for validation after the switchover.<br><br>
+10. **Congratulations!** You have completed Exercise 1. The source system remains available during the **Uptime** phase, and your migration milestone has been recorded for validation after the switchover.<br><br>
 
 
 ## Optional: Test Your Knowledge

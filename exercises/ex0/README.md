@@ -25,9 +25,13 @@
 
 
 ## Landscape Overview
-<p align="justify">The following landscape illustrates the end-to-end setup used in this hands-on session:</p>
+<p align="justify">The following diagram illustrates the <b>hands-on system landscape</b> and the shared services used throughout this session.</p>
 
-&lt;HERE COMES AN IMAGE&gt;<br><br><br>
+<p align="justify">Each participant works in a <b>dedicated lab environment</b> consisting of a <b>Source System</b> running <b>SAP S/4HANA FOUNDATION 2025 FPS01</b>, a <b>Migration Server</b> hosting the <b>RISE with SAP System Transition Workbench</b>, and a <b>Target System</b> based on <b>SAP S/4HANA FOUNDATION 2025 FPS00</b> (Skeleton System).</p>
+
+<p align="justify">Shared services include <b>SAP HANA Cockpit</b> for database administration and <b>Joule for Consultants</b> for AI-assisted migration guidance. <b>SAP Cloud Identity Services</b> enables <b>Single Sign-On (SSO)</b> for these applications.</p><br>
+
+![](./images/Screenshot-1-03.png)<br><br><br>
 
 
 ## Access Your Lab Environment
