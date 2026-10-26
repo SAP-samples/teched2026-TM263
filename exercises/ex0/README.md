@@ -7,6 +7,8 @@
 
 <p align="justify">Like many real-world enterprises, CONSAREA aims to modernize its SAP landscape while minimizing business disruption and reducing migration risks. To support this transition, the company has engaged <b>CONSAREA Services</b>, a subsidiary of CONSAREA Inc., as its <b>migration partner</b>. Together, they have chosen the <b>RISE with SAP System Transition Workbench</b> as a guided approach to managing and executing the migration process.</p>
 
+<p align="justify">To complement this guided approach, <b>CONSAREA Services</b> has adopted <b>SAP Joule for Consultants</b> and developed a dedicated <b>Migration Expert</b> using its internal expertise and knowledge base. The expert is available to support CONSAREA Services employees throughout the migration journey.</p>
+
 <p align="justify">Before migrating business-critical systems, CONSAREA has decided to validate its <b>lift-and-shift approach</b> through an <b>initial sandbox migration based on a homogeneous SAP HANA tenant copy</b>. This allows the migration team to become familiar with the process, validate the technical steps, and gain confidence in the transition approach.</p>
 
 <p align="justify">The following diagram illustrates the high-level migration setup. The <b>RISE with SAP System Transition Workbench</b> orchestrates the migration process and installs a <b>temporary ABAP system</b> on the <b>Migration VM</b>. While <b>SAP HANA tenant replication</b> replicates data from the source to the target database, the temporary system remains inactive. Once the tenant copy is finalized, it connects to the <b>target SAP HANA database</b> to perform post-processing activities before the final switch to the <b>Main Instance</b>.</p><br>
@@ -19,7 +21,7 @@
 ## TM263 at a Glance
 <p align="justify">Using the <b>RISE with SAP System Transition Workbench</b> and a <b>preconfigured hands-on landscape</b>, you will experience the end-to-end migration process, starting with <b>prerequisite checks</b> and <b>software preparation</b>, followed by <b>SAP HANA tenant replication</b>, <b>downtime processing</b>, and the <b>final application switchover</b>. Along the way, you will document migration milestones and validate <b>data continuity</b> on the target system.</p>
 
-<p align="justify">Below you will find an overview of all six exercises and their corresponding migration phases. The <b>Joule for Consultants</b> icons highlight selected activities where a dedicated <b>Migration Expert</b> provides AI-assisted technical guidance.</p><br>
+<p align="justify">Below you will find an overview of all six exercises and their corresponding migration phases. The <b>SAP Joule for Consultants</b> icons highlight selected activities where a dedicated <b>Migration Expert</b> provides AI-assisted technical guidance.</p><br>
 
 ![](./images/Screenshot-1-02.png)<br><br><br>
 
@@ -29,7 +31,7 @@
 
 <p align="justify">Each participant works in a <b>dedicated lab environment</b> consisting of a <b>Source System</b> running <b>SAP S/4HANA FOUNDATION 2025 FPS01</b>, a <b>Migration Server</b> hosting the <b>RISE with SAP System Transition Workbench</b>, and a <b>Target System</b> based on <b>SAP S/4HANA FOUNDATION 2025 FPS00</b> (Skeleton System).</p>
 
-<p align="justify">Shared services include <b>SAP HANA Cockpit</b> for database administration and <b>Joule for Consultants</b> for AI-assisted migration guidance. <b>SAP Cloud Identity Services</b> enables <b>Single Sign-On (SSO)</b> for these applications.</p><br>
+<p align="justify">Shared services include <b>SAP HANA Cockpit</b> for database administration and <b>SAP Joule for Consultants</b> for AI-assisted migration guidance. <b>SAP Cloud Identity Services</b> enables <b>Single Sign-On (SSO)</b> for these applications.</p><br>
 
 ![](./images/Screenshot-1-03.png)<br><br><br>
 

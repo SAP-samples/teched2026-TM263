@@ -34,6 +34,8 @@ Follow these steps to complete the exercise:<br>
 8.  The workbench installs the **Intermediate System** on the **Migration VM**, including the **Skeleton System**, **ABAP Central Services (ASCS)**, and the **Primary Application Server (PAS)** instance stub. Wait until the installation is complete.<br><br>
     ![](images/Screenshot-1-06.png)<br>
 
+    > **💡 TIP**: Tasks within the same section may be executed in parallel once they are unlocked. In this hands-on session, however, we will complete them sequentially to explore each task in detail.
+
 9.  Verify that **Task 3.1 – Preparation for SAP HANA Tenant Copy** has the status **Completed**, with **100% progress** and all key tasks marked as successful.<br><br>
     ![](images/Screenshot-1-07.png)<br>
 
@@ -88,7 +90,7 @@ Follow these steps to complete the exercise:<br>
 9.  Verify that **Initialize and Monitor SAP HANA Replication** has the status **Completed**, with **100% progress** and all key tasks marked as successful.<br><br>
     ![](images/Screenshot-3-07.png)<br>
 
-10. Switch back to the [Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) browser tab and make sure the **Migration Expert** is active.<br>
+10. Switch back to the [SAP Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) browser tab and make sure the **Migration Expert** is active.<br>
 
     > **💡 TIP**: To open this link in a new tab, **right-click** and choose **Open Link in New Tab**.
 
