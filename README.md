@@ -1,4 +1,5 @@
 # TM263 - AI-accelerated RISE with SAP migration with the system transition workbench
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-TM263)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-TM263)
 
 ## Overview
 <p align="justify">This hands-on session shows how to perform a <b>homogeneous SAP S/4HANA migration</b> to <b>RISE with SAP</b> using the <b>RISE with SAP System Transition Workbench</b>. You will perform a guided <b>lift-and-shift sandbox migration</b> of an <b>SAP S/4HANA FOUNDATION 2025 FPS01</b> system to the <b>Private Cloud Environment</b>, with <b>SAP HANA tenant replication</b> as the technical migration approach.</p><br>
