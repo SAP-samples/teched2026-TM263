@@ -4,7 +4,7 @@
 This exercise consists of the following sub-exercises:
 - [Exercise 1.1 - Access RISE with SAP System Transition Workbench](#exercise-11---access-rise-with-sap-system-transition-workbench)
 - [Exercise 1.2 - Start Prerequisite Checks](#exercise-12---start-prerequisite-checks)
-- [Exercise 1.3 - Resolve SAP HANA Configuration Issue](#exercise-13---resolve-sap-hana-configuration-issue)
+- [Exercise 1.3 - Verify SAP HANA Configuration](#exercise-13---verify-sap-hana-configuration)
 - [Exercise 1.4 - Continue Prerequisite Checks](#exercise-14---continue-prerequisite-checks)
 - [Exercise 1.5 - Perform Guided Transition Checks](#exercise-15---perform-guided-transition-checks)
 - [Exercise 1.6 - Document Progress on the Source System](#exercise-16---document-progress-on-the-source-system)
@@ -25,6 +25,7 @@ Follow these steps to complete the exercise:<br>
 4.  In the **Create a new process** dialog, navigate through the following catalog entries:<br>
     - **RISE with SAP System Transition Workbench for SAP S/4HANA Cloud Private Edition**
     - **Homogeneous System Copy Including SAP HANA Tenant Copy or Move**
+      You can click on **Details** to understand more about the approach in question.
 
 5.  Select **SAP HANA Tenant Copy Cockpit** [1] and choose **Create** [2] to initialize the process.<br><br>
     ![](images/Screenshot-1-03.png)<br>
@@ -74,7 +75,7 @@ Follow these steps to complete the exercise:<br>
     ![](images/Screenshot-2-06.png)<br>
 
 11. Leave the **confirmation checkbox unchecked** for now.<br>
-12. Open [Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) and sign in as **DEMOXXX** (replace *XXX* with your seat number, for example **DEMO001**).<br>
+12. Open [SAP Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) and sign in as **DEMOXXX** (replace *XXX* with your seat number, for example **DEMO001**).<br>
 
     > **💡 TIP**: To open this link in a new tab, **right-click** and choose **Open Link in New Tab**.
 
@@ -97,11 +98,15 @@ Follow these steps to complete the exercise:<br>
     ![](images/Screenshot-2-09.png)<br>
 
 17. Joule explains that log retention preserves the **log segments** needed to resynchronize the target database if replication is interrupted. If the required logs are no longer available, **a full data transfer** may be necessary, increasing migration effort and potential downtime.<br>
-18. Now that you understand the importance of log retention, continue with **Exercise 1.3** to resolve the SAP HANA configuration issue.<br><br><br>
+18. Now that you understand the importance of log retention, return to the **RISE with SAP System Transition Workbench**.<br>
+19. Select the confirmation checkbox and choose **Next** to allow the workbench to apply the required configuration automatically.<br><br>
+    ![](images/Screenshot-2-10.png)<br>
+
+20. Continue with **Exercise 1.3** to verify that the setting has been applied successfully.<br><br><br>
 
 
-## Exercise 1.3 - Resolve SAP HANA Configuration Issue
-<p align="justify">In this sub-exercise, you will access the <b>SAP HANA Database Explorer</b>, resolve the configuration issue identified by the <b>System Transition Workbench</b>, and prepare the source database for SAP HANA tenant replication.</p>
+## Exercise 1.3 - Verify SAP HANA Configuration
+<p align="justify">In this sub-exercise, you will use the <b>SAP HANA Database Explorer</b> to verify that the <b>System Transition Workbench</b> has automatically applied the required log retention configuration to the source SAP HANA database.</p>
 
 Follow these steps to complete the exercise:<br>
 1.  Open [SAP HANA Cockpit](https://hana-sap-cockpit-web-app.cockpit.lab.consarea.com) and choose **IAS az5jw0bcg** on the login screen.<br>
@@ -110,46 +115,49 @@ Follow these steps to complete the exercise:<br>
 
     ![](images/Screenshot-3-01.png)<br>
 
-2.  Log on as **DEMOXXX** (replace *XXX* with your seat number, for example **DEMO001**).<br>
+2.  You should be signed in automatically as **DEMOXXX** (replace *XXX* with your seat number, for example **DEMO001**).<br> 
 3.  In the **SAP HANA Database Explorer**, locate your preconfigured **source SAP HANA system database** connection.<br>
 4.  Select the preconfigured `SYSTEM@source (DEMO)` connection [1] and open a new **SQL Console** [2].<br><br>
     ![](images/Screenshot-3-02.png)<br>
 
 
-5.  Enter the following **SQL statement** to enable log retention for SAP HANA tenant replication:
+5.  Enter the following **SQL statement** to check the log retention configuration:
     ```sql
-    ALTER SYSTEM ALTER CONFIGURATION ('global.ini', 'SYSTEM')
-    SET ('system_replication', 'enable_log_retention') = 'on'
-    WITH RECONFIGURE;
+    SELECT
+        FILE_NAME,
+        LAYER_NAME,
+        SECTION,
+        KEY,
+        VALUE
+    FROM SYS.M_INIFILE_CONTENTS
+    WHERE FILE_NAME = 'global.ini'
+    AND SECTION = 'system_replication'
+    AND KEY = 'enable_log_retention';
     ```
-6.  Choose **Execute** [1] to apply the configuration change. Verify that the SQL statement completes without errors in the **Messages** panel [2].<br><br>
+6.  Choose **Execute** [1] to run the query. Review the results [2] and verify that **enable_log_retention** is set to **on** at the **SYSTEM** layer. The DEFAULT layer may still show auto, which is expected because the SYSTEM-level configuration overrides the default value.<br><br>
     ![](images/Screenshot-3-03.png)<br>
 
-7.  The required configuration change has been applied. Return to the **RISE with SAP System Transition Workbench** to resume the prerequisite checks in Exercise 1.4. <br><br><br>
+7.  The required configuration has been successfully verified. Return to the **RISE with SAP System Transition Workbench** and continue with **Exercise 1.4** to review the prerequisite check results.<br><br><br>
 
 
 ## Exercise 1.4 - Continue Prerequisite Checks
-<p align="justify">In this sub-exercise, you will resume the prerequisite checks in the System Transition Workbench, review the SAP HANA database backup requirements, and create a missing incremental backup to prepare the source system for tenant replication.</p>
+<p align="justify">In this sub-exercise, you will review the <b>Prerequisite Checks Results</b>, examine the SAP HANA database backup requirements, and create a missing incremental backup to prepare the source system for tenant replication.</p>
 
 Follow these steps to complete the exercise:<br>
-1.  In the **RISE with SAP System Transition Workbench**, select the confirmation checkbox and choose **Next** to continue.<br><br>
-    ![](images/Screenshot-4-01.png)<br>
-
-2.  The workbench performs additional checks, including database backup status, log backup configuration, and available disk space on the target system.<br>
-3.  Review the **Prerequisite Checks Results**. The **Check Source Database Backup** validation reports a warning because no recent incremental backup is available.<br>
+1.  In the **RISE with SAP System Transition Workbench**, review the **Prerequisite Checks Results**. The **Check Source Database Backup** validation reports a warning because no recent incremental backup is available.<br>
 
     > **ℹ️ NOTE**: The workbench requires a recent incremental backup (within 24 hours) and a full backup (within 168 hours). Our source system already has a valid full backup, but an incremental backup is missing.
 
-    ![](images/Screenshot-4-02.png)<br>
+    ![](images/Screenshot-4-01.png)<br>
 
-4.  Return to the SAP HANA Database Explorer. Select the preconfigured `DEH@source (DEMO)` tenant database connection and open a new **SQL Console**.<br>
+2.  Switch to the **SAP HANA Database Explorer**. Select the preconfigured `DEH@source (DEMO)` tenant database connection and open a new **SQL Console**.<br>
 
-5.  Execute the following **SQL statement** to create an incremental data backup:
+3.  Execute the following **SQL statement** to create an incremental data backup:
     ```sql
     BACKUP DATA INCREMENTAL USING FILE ('TM263_INCREMENTAL_BACKUP');
     ```
 
-6.  Once the backup has completed, execute the following SQL statement to review the latest backup catalog entries:
+4.  Once the backup has completed, execute the following SQL statement to review the latest backup catalog entries:
     ```sql
     SELECT TOP 10
         BACKUP_ID,
@@ -164,16 +172,16 @@ Follow these steps to complete the exercise:<br>
     )
     ORDER BY SYS_START_TIME DESC;
     ```
-7.  Verify that both the incremental data backup and the previously created complete data backup have the status **successful**.<br><br>
+5.  Verify that both the incremental data backup and the previously created complete data backup have the status **successful**.<br><br>
+    ![](images/Screenshot-4-02.png)<br>
+
+6.  Switch back to the System Transition Workbench browser tab and choose **Next** to continue with the remaining prerequisite checks.<br><br>
     ![](images/Screenshot-4-03.png)<br>
 
-8.  Return to the System Transition Workbench and choose **Next** to continue with the remaining prerequisite checks.<br><br>
+7.  The workbench proceeds to the **Guided Transition Checks** and requests confirmation that the latest version described in **SAP Note 3409764** has been implemented.<br><br>
     ![](images/Screenshot-4-04.png)<br>
 
-9.  The workbench proceeds to the **Guided Transition Checks** and requests confirmation that the latest version described in **SAP Note 3409764** has been implemented.<br><br>
-    ![](images/Screenshot-4-05.png)<br>
-
-10. Leave the **confirmation screen open** for now. In the next sub-exercise, you will proceed with the **Guided Transition Checks**.
+8.  Leave the **confirmation screen open** for now. In the next sub-exercise, you will proceed with the **Guided Transition Checks**.
 <br><br><br>
 
 
@@ -245,7 +253,7 @@ Follow these steps to complete the exercise:<br>
 26. The workbench executes the checks again. Verify that the **SAP Note Implementation** and **Open Transport Requests** findings have been resolved. Only the **Pool/Cluster Table Check** remains as a **Non-Blocking Error**.<br><br>
     ![](images/Screenshot-5-16.png)<br>
 
-27. Return to your [Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) chat and make sure the **Migration Expert** is active.<br>
+27. Return to your [SAP Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) chat and make sure the **Migration Expert** is active.<br>
 
     > **💡 TIP**: To open this link in a new tab, **right-click** and choose **Open Link in New Tab**.
 

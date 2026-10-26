@@ -31,7 +31,7 @@ Follow these steps to complete the exercise:<br>
 
 8.  Review the existing **Log Entries**. Verify that all **five records** from the source system are available on the target system, including the welcome message and the four migration milestones.<br>
 
-9.  Switch back to the [Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) browser tab and make sure the **Migration Expert** is active.<br>
+9.  Switch back to the [SAP Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) browser tab and make sure the **Migration Expert** is active.<br>
 
     > **💡 TIP**: To open this link in a new tab, **right-click** and choose **Open Link in New Tab**.
 

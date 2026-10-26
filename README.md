@@ -6,7 +6,7 @@
 
 ![](./exercises/ex0/images/Screenshot-1-01.png)<br><br>
 
-<p align="justify">Using the <b>RISE with SAP System Transition Workbench</b>, you will <b>check migration prerequisites</b>, <b>prepare the required software</b>, and <b>establish SAP HANA replication</b> before completing <b>downtime processing</b>, <b>post-processing</b>, and the <b>final application switchover</b>. Along the way, you will document key migration milestones and validate data continuity on the target system. At selected points throughout the migration, you will use <b>Joule for Consultants</b> with a dedicated <b>Migration Expert</b> to gain additional technical insights and support troubleshooting.</p><br>
+<p align="justify">Using the <b>RISE with SAP System Transition Workbench</b>, you will <b>check migration prerequisites</b>, <b>prepare the required software</b>, and <b>establish SAP HANA replication</b> before completing <b>downtime processing</b>, <b>post-processing</b>, and the <b>final application switchover</b>. Along the way, you will document key migration milestones and validate data continuity on the target system. At selected points throughout the migration, you will use <b>SAP Joule for Consultants</b> with a dedicated <b>Migration Expert</b> to gain additional technical insights and support troubleshooting.</p><br>
 
 ## Requirements
 To complete the exercises in this hands-on session, you need **SAP GUI** and a **web browser** (preferably **Google Chrome**).<br><br>
