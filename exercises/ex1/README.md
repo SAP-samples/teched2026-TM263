@@ -1,8 +1,8 @@
 # Exercise 1 - Initiate the Transition: Check Prerequisites
-<p align="justify">In this exercise, you will initiate the transition process for an SAP HANA tenant copy using the <b>RISE with SAP System Transition Workbench</b>, validate migration readiness, and resolve prerequisite findings in the source system. You will then record a milestone in an SAP Fiori application while the source system is still available during the <b>Uptime</b> phase.</p>
+<p align="justify">In this exercise, you will initiate the transition process for an SAP HANA tenant copy using the <b>RISE with SAP system transition workbench</b>, validate migration readiness, and resolve prerequisite findings in the source system. You will then record a milestone in an SAP Fiori application while the source system is still available during the <b>Uptime</b> phase.</p>
 
 This exercise consists of the following sub-exercises:
-- [Exercise 1.1 - Access RISE with SAP System Transition Workbench](#exercise-11---access-rise-with-sap-system-transition-workbench)
+- [Exercise 1.1 - Access RISE with SAP system transition workbench](#exercise-11---access-rise-with-sap-system-transition-workbench)
 - [Exercise 1.2 - Start Prerequisite Checks](#exercise-12---start-prerequisite-checks)
 - [Exercise 1.3 - Verify SAP HANA Configuration](#exercise-13---verify-sap-hana-configuration)
 - [Exercise 1.4 - Continue Prerequisite Checks](#exercise-14---continue-prerequisite-checks)
@@ -11,11 +11,11 @@ This exercise consists of the following sub-exercises:
 
 <br>
 
-## Exercise 1.1 - Access RISE with SAP System Transition Workbench
-<p align="justify">In this sub-exercise, you will access the <b>RISE with SAP System Transition Workbench</b>, create a new SAP HANA tenant copy process, select the preconfigured vault, and familiarize yourself with the <b>Uptime</b> and <b>Downtime</b> phases.</p>
+## Exercise 1.1 - Access RISE with SAP system transition workbench
+<p align="justify">In this sub-exercise, you will access the <b>RISE with SAP system transition workbench</b>, create a new SAP HANA tenant copy process, select the preconfigured vault, and familiarize yourself with the <b>Uptime</b> and <b>Downtime</b> phases.</p>
 
 Follow these steps to complete the exercise:<br>
-1.  Open the **RISE with SAP System Transition Workbench** using the `transition-workbench.url` shortcut included in your connection package.<br>
+1.  Open the **RISE with SAP system transition workbench** using the `transition-workbench.url` shortcut included in your connection package.<br>
 2.  Log on as **sapadm** with the **master password** provided for your hands-on session.<br><br>
     ![](images/Screenshot-1-01.png)<br>
 
@@ -23,7 +23,7 @@ Follow these steps to complete the exercise:<br>
     ![](images/Screenshot-1-02.png)<br>
 
 4.  In the **Create a new process** dialog, navigate through the following catalog entries:<br>
-    - **RISE with SAP System Transition Workbench for SAP S/4HANA Cloud Private Edition**
+    - **RISE with SAP system transition workbench for SAP S/4HANA Cloud Private Edition**
     - **Homogeneous System Copy Including SAP HANA Tenant Copy or Move**
       You can click on **Details** to understand more about the approach in question.
 
@@ -34,7 +34,7 @@ Follow these steps to complete the exercise:<br>
 7.  Enter the **master password** provided for your hands-on session in the **Vault Password** field and choose **Next**.<br><br>
     ![](images/Screenshot-1-04.png)<br>
 
-    > **ℹ️ NOTE**: We have preconfigured the vault with all credentials and connection details required for this hands-on session, including **Landscape Information**, **S-User**, **ABAP**, and **HANA** credentials.
+    > **ℹ️ NOTE**: We have preconfigured the vault with all credentials and connection details required for this hands-on session, including **Landscape Information**, **S-User**, **ABAP**, and **SAP HANA** credentials.
 
 8.  The **SAP HANA Tenant Copy Cockpit** opens and displays the process overview. The migration procedure is divided into two phases: **Uptime** and **Downtime**.<br><br>
     During the **Uptime** phase, prerequisite checks, software downloads, and initial SAP HANA replication are performed while the source system remains available for business operations.<br><br>
@@ -98,7 +98,7 @@ Follow these steps to complete the exercise:<br>
     ![](images/Screenshot-2-09.png)<br>
 
 17. Joule explains that log retention preserves the **log segments** needed to resynchronize the target database if replication is interrupted. If the required logs are no longer available, **a full data transfer** may be necessary, increasing migration effort and potential downtime.<br>
-18. Now that you understand the importance of log retention, return to the **RISE with SAP System Transition Workbench**.<br>
+18. Now that you understand the importance of log retention, return to the **RISE with SAP system transition workbench**.<br>
 19. Select the confirmation checkbox and choose **Next** to allow the workbench to apply the required configuration automatically.<br><br>
     ![](images/Screenshot-2-10.png)<br>
 
@@ -137,14 +137,14 @@ Follow these steps to complete the exercise:<br>
 6.  Choose **Execute** [1] to run the query. Review the results [2] and verify that **enable_log_retention** is set to **on** at the **SYSTEM** layer. The DEFAULT layer may still show auto, which is expected because the SYSTEM-level configuration overrides the default value.<br><br>
     ![](images/Screenshot-3-03.png)<br>
 
-7.  The required configuration has been successfully verified. Return to the **RISE with SAP System Transition Workbench** and continue with **Exercise 1.4** to review the prerequisite check results.<br><br><br>
+7.  The required configuration has been successfully verified. Return to the **RISE with SAP system transition workbench** and continue with **Exercise 1.4** to review the prerequisite check results.<br><br><br>
 
 
 ## Exercise 1.4 - Continue Prerequisite Checks
 <p align="justify">In this sub-exercise, you will review the <b>Prerequisite Checks Results</b>, examine the SAP HANA database backup requirements, and create a missing incremental backup to prepare the source system for tenant replication.</p>
 
 Follow these steps to complete the exercise:<br>
-1.  In the **RISE with SAP System Transition Workbench**, review the **Prerequisite Checks Results**. The **Check Source Database Backup** validation reports a warning because no recent incremental backup is available.<br>
+1.  In the **RISE with SAP system transition workbench**, review the **Prerequisite Checks Results**. The **Check Source Database Backup** validation reports a warning because no recent incremental backup is available.<br>
 
     > **ℹ️ NOTE**: The workbench requires a recent incremental backup (within 24 hours) and a full backup (within 168 hours). Our source system already has a valid full backup, but an incremental backup is missing.
 
@@ -189,7 +189,7 @@ Follow these steps to complete the exercise:<br>
 <p align="justify">In this sub-exercise, you will perform the <b>Guided Transition Checks</b>, analyze migration readiness findings, resolve issues related to SAP Notes and open transport requests, and validate the remaining results before completing the prerequisite checks.</p>
 
 Follow these steps to complete the exercise:<br>
-1.  Return to the **RISE with SAP System Transition Workbench** and choose **OK** to continue.<br>
+1.  Return to the **RISE with SAP system transition workbench** and choose **OK** to continue.<br>
 
     > **ℹ️ NOTE**: The latest version of the **Guided Transition Checks** has already been implemented in our source system.
 
@@ -247,7 +247,7 @@ Follow these steps to complete the exercise:<br>
     ![](images/Screenshot-5-14.png)<br>
 
 24. The manual check found no remaining pool or cluster tables within its scope. Use this result to assess the Pool/Cluster Table finding after rerunning the **Guided Transition Checks**.
-25. Return to the **RISE with SAP System Transition Workbench** and choose **Retry** to execute the **Guided Transition Checks** again.<br><br>
+25. Return to the **RISE with SAP system transition workbench** and choose **Retry** to execute the **Guided Transition Checks** again.<br><br>
     ![](images/Screenshot-5-15.png)<br>
 
 26. The workbench executes the checks again. Verify that the **SAP Note Implementation** and **Open Transport Requests** findings have been resolved. Only the **Pool/Cluster Table Check** remains as a **Non-Blocking Error**.<br><br>

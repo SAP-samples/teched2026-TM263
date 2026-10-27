@@ -11,7 +11,7 @@ This exercise consists of the following sub-exercises:
 <br>
 
 ## Exercise 3.1 – Prepare the Intermediate System
-<p align="justify">In this sub-exercise, you will configure the required parameters and use the <b>RISE with SAP System Transition Workbench</b> to install the <b>Intermediate System</b> on the <b>Migration Server</b>, preparing the environment for the SAP HANA tenant copy.</p>
+<p align="justify">In this sub-exercise, you will configure the required parameters and use the <b>RISE with SAP system transition workbench</b> to install the <b>Intermediate System</b> on the <b>Migration Server</b>, preparing the environment for the SAP HANA tenant copy.</p>
 
 Follow these steps to complete the exercise:<br>
 1.  In the **SAP HANA Tenant Copy Cockpit**, under **Uptime**, select **Task 3.1 – Preparation for SAP HANA Tenant Copy**.<br><br>
@@ -62,7 +62,7 @@ Follow these steps to complete the exercise:<br>
 
 
 ## Exercise 3.3 – Initialize and Monitor SAP HANA Replication
-<p align="justify">In this sub-exercise, you will use the <b>RISE with SAP System Transition Workbench</b> to initialize and monitor <b>SAP HANA tenant replication</b> between the source and target systems while the source system remains available during the <b>Uptime</b> phase.</p>
+<p align="justify">In this sub-exercise, you will use the <b>RISE with SAP system transition workbench</b> to initialize and monitor <b>SAP HANA tenant replication</b> between the source and target systems while the source system remains available during the <b>Uptime</b> phase.</p>
 
 Follow these steps to complete the exercise:<br>
 1.  In the **SAP HANA Tenant Copy Cockpit**, under **Uptime**, select **Task 3.2 – Initialize and Monitor SAP HANA Replication**.<br><br>
@@ -103,8 +103,8 @@ Follow these steps to complete the exercise:<br>
     ![](images/Screenshot-3-08.png)<br>
 
 13. Joule explains that **ACTIVE** confirms the expected replication status during **Uptime**, but does not mean the tenant copy is finalized.<br><br>
-    The **RISE with SAP System Transition Workbench** guides the subsequent **Downtime** activities, including source application isolation, replication backlog verification, and finalization through the **SAP HANA Tenant Copy Cockpit**. **Post-Processing** and the subsequent switch to the **Main Instance** are handled as separate steps.<br>
-14. Switch back to the **RISE with SAP System Transition Workbench** browser tab. Choose **Confirm and Continue** to return to the **SAP HANA Tenant Copy Cockpit**. Then proceed with **Exercise 3.4** to document this milestone on the source system.<br><br><br>
+    The **RISE with SAP system transition workbench** guides the subsequent **Downtime** activities, including source application isolation, replication backlog verification, and finalization through the **SAP HANA Tenant Copy Cockpit**. **Post-Processing** and the subsequent switch to the **Main Instance** are handled as separate steps.<br>
+14. Switch back to the **RISE with SAP system transition workbench** browser tab. Choose **Confirm and Continue** to return to the **SAP HANA Tenant Copy Cockpit**. Then proceed with **Exercise 3.4** to document this milestone on the source system.<br><br><br>
 
 
 ## Exercise 3.4 – Document Progress on the Source System (Part 2)

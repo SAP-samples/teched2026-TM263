@@ -1,5 +1,5 @@
 # Exercise 4 - Finalize the Tenant Copy
-<p align="justify">In this exercise, you will enter the <b>Downtime</b> phase, isolate the source SAP system, and use the <b>RISE with SAP System Transition Workbench</b> to finalize the <b>SAP HANA tenant copy</b>. You will monitor the final replication, review table record count comparisons, and start the application on the Migration Server.</p><br>
+<p align="justify">In this exercise, you will enter the <b>Downtime</b> phase, isolate the source SAP system, and use the <b>RISE with SAP system transition workbench</b> to finalize the <b>SAP HANA tenant copy</b>. You will monitor the final replication, review table record count comparisons, and start the application on the Migration Server.</p><br>
 
 ## Steps:
 Follow these steps to complete the exercise:<br>
