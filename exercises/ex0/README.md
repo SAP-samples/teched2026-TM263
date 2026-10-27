@@ -46,7 +46,7 @@ Follow these steps to set up access to your assigned lab systems:<br>
     > **💡 TIP**: To open this link in a new tab, **right-click** and choose **Open Link in New Tab**.
 
 3.  Download **TM263_SystemDetails.zip** and extract it to a local folder.<br>
-4.  Use the provided **SAP GUI connection** files and **browser links** to access your assigned systems.<br><br><br>
+4.  Keep the extracted **SAP GUI connection** files and **browser links** available. You will use them to access your assigned systems when instructed in the corresponding exercises.<br><br><br>
 
 
 ## Further Links

@@ -34,7 +34,7 @@ Follow these steps to complete the exercise:<br>
 8.  The workbench installs the **Intermediate System** on the **Migration VM**, including the **Skeleton System**, **ABAP Central Services (ASCS)**, and the **Primary Application Server (PAS)** instance stub. Wait until the installation is complete.<br><br>
     ![](images/Screenshot-1-06.png)<br>
 
-    > **💡 TIP**: Tasks within the same section may be executed in parallel once they are unlocked. In this hands-on session, however, we will complete them sequentially to explore each task in detail.
+    > **💡 TIP**: Installing the Intermediate System may take **5–10 minutes**. Tasks within the same section can run in parallel once unlocked. Feel free to explore this capability by starting other available tasks while the installation is running (Exercise 3.3).
 
 9.  Verify that **Task 3.1 – Preparation for SAP HANA Tenant Copy** has the status **Completed**, with **100% progress** and all key tasks marked as successful.<br><br>
     ![](images/Screenshot-1-07.png)<br>
@@ -75,36 +75,32 @@ Follow these steps to complete the exercise:<br>
 5.  During the **Prepare SAP HANA Source Database for Replication** step, the workbench requests confirmation that an up-to-date backup of the source database tenant exists. Select the **confirmation checkbox** and choose **Next** to continue.<br><br>
     ![](images/Screenshot-3-03.png)<br>
 
-6.  The workbench may display an additional **backup warning** indicating that incremental backups are missing.<br><br>
-    Review the backup information and confirm that the backup state is acceptable for this workshop. Then select **I confirm that I am aware of the backup warning and I want to continue** and choose **Next** to proceed.<br><br>
-    ![](images/Screenshot-3-04.png)<br>
-
-7.  The workbench automatically configures **SAP HANA tenant replication**, prepares the source and target databases, and starts the replication process.<br><br>
+6.  The workbench automatically configures **SAP HANA tenant replication**, prepares the source and target databases, and starts the replication process.<br><br>
     ![](images/Screenshot-3-05.png)<br>
 
     > **ℹ️ NOTE:** Initializing SAP HANA replication may take up to **10 minutes**. Wait until the replication status is **ACTIVE** before proceeding.
 
-8.  Under **Monitor Replication Status**, verify that the replication status changes to **ACTIVE**. Once the status is **ACTIVE**, choose **Next** to proceed.<br><br>
+7.  Under **Monitor Replication Status**, verify that the replication status changes to **ACTIVE**. Once the status is **ACTIVE**, choose **Next** to proceed.<br><br>
     ![](images/Screenshot-3-06.png)<br>
 
-9.  Verify that **Initialize and Monitor SAP HANA Replication** has the status **Completed**, with **100% progress** and all key tasks marked as successful.<br><br>
+8.  Verify that **Initialize and Monitor SAP HANA Replication** has the status **Completed**, with **100% progress** and all key tasks marked as successful.<br><br>
     ![](images/Screenshot-3-07.png)<br>
 
-10. Switch back to the [SAP Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) browser tab and make sure the **Migration Expert** is active.<br>
+9. Switch back to the [SAP Joule for Consultants](https://twb-5o5qcjut.eu10.sapj4c.cloud.sap/dashboard/joule) browser tab and make sure the **Migration Expert** is active.<br>
 
     > **💡 TIP**: To open this link in a new tab, **right-click** and choose **Open Link in New Tab**.
 
-11. Ask the following question:<br>
+10. Ask the following question:<br>
     ```text
     SAP HANA tenant replication is now ACTIVE. What does this mean, and what needs to happen before
     we can switch to the target system?
     ```
-12. Joule processes your question, which may take a moment. Once the response appears, **review the technical explanation**.<br><br>
+11. Joule processes your question, which may take a moment. Once the response appears, **review the technical explanation**.<br><br>
     ![](images/Screenshot-3-08.png)<br>
 
-13. Joule explains that **ACTIVE** confirms the expected replication status during **Uptime**, but does not mean the tenant copy is finalized.<br><br>
+12. Joule explains that **ACTIVE** confirms the expected replication status during **Uptime**, but does not mean the tenant copy is finalized.<br><br>
     The **RISE with SAP system transition workbench** guides the subsequent **Downtime** activities, including source application isolation, replication backlog verification, and finalization through the **SAP HANA Tenant Copy Cockpit**. **Post-Processing** and the subsequent switch to the **Main Instance** are handled as separate steps.<br>
-14. Switch back to the **RISE with SAP system transition workbench** browser tab. Choose **Confirm and Continue** to return to the **SAP HANA Tenant Copy Cockpit**. Then proceed with **Exercise 3.4** to document this milestone on the source system.<br><br><br>
+13. Switch back to the **RISE with SAP system transition workbench** browser tab. Choose **Confirm and Continue** to return to the **SAP HANA Tenant Copy Cockpit**. Then proceed with **Exercise 3.4** to document this milestone on the source system.<br><br><br>
 
 
 ## Exercise 3.4 – Document Progress on the Source System (Part 2)
