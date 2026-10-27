@@ -1,5 +1,5 @@
 # Exercise 2 - Prepare the Transition: Download Software
-<p align="justify">In this exercise, you will review the software preparation completed in <b>SAP Maintenance Planner</b>, use the <b>RISE with SAP System Transition Workbench</b> to download the required software archives, and record your progress while the source SAP system remains available during the <b>Uptime</b> phase.</p><br>
+<p align="justify">In this exercise, you will review the software preparation completed in <b>SAP Maintenance Planner</b>, use the <b>RISE with SAP system transition workbench</b> to download the required software archives, and record your progress while the source SAP system remains available during the <b>Uptime</b> phase.</p><br>
 
 This exercise consists of the following sub-exercises:
 - [Exercise 2.1 – Review Maintenance Planner Preparation](#exercise-21--review-maintenance-planner-preparation)
@@ -22,7 +22,7 @@ Review the following preparation completed for this hands-on session:<br>
 
 
 ## Exercise 2.2 – Download Required Software
-<p align="justify">In this sub-exercise, you will use the <b>RISE with SAP System Transition Workbench</b> to retrieve the prepared <b>Maintenance Planner</b> transaction and download the software archives required for the <b>SAP HANA Tenant Copy</b>.</p>
+<p align="justify">In this sub-exercise, you will use the <b>RISE with SAP system transition workbench</b> to retrieve the prepared <b>Maintenance Planner</b> transaction and download the software archives required for the <b>SAP HANA Tenant Copy</b>.</p>
 
 Follow these steps to complete the exercise:<br>
 1.  In the **SAP HANA Tenant Copy Cockpit**, under **Uptime**, select **Task 2.1 – Software Download for SAP HANA Tenant Copy**.<br><br>

@@ -1,5 +1,5 @@
 # Exercise 5 - Complete Migration Post-Processing
-<p align="justify">In this exercise, you will complete the <b>Post-Processing</b> activities for the <b>SAP HANA tenant copy</b> using the <b>RISE with SAP System Transition Workbench</b>. You will run the remaining <b>Guided Transition Checks</b> on the <b>Intermediate System</b>, shut down the intermediate SAP application, and review the simulated <b>ECS handover</b> activities before the final switch to the main instance.</p><br>
+<p align="justify">In this exercise, you will complete the <b>Post-Processing</b> activities for the <b>SAP HANA tenant copy</b> using the <b>RISE with SAP system transition workbench</b>. You will run the remaining <b>Guided Transition Checks</b> on the <b>Intermediate System</b>, shut down the intermediate SAP application, and review the simulated <b>ECS handover</b> activities before the final switch to the main instance.</p><br>
 
 ## Steps:
 Follow these steps to complete the exercise:<br>
